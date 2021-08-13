@@ -90,6 +90,13 @@
                                     </a>
 
 
+
+                                </li>
+                                <li class="adomx-dropdown col-auto">
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <button type="submit" class="btn btn-primary">خروج</button>
+                                    </form>
                                 </li>
 
                             </ul>

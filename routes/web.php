@@ -13,15 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
 
-
-Route::prefix('admin')->middleware('auth')->group(function (){
+Route::prefix('/')->middleware('auth')->group(function (){
 //    Route::get('/user', \App\Http\Controllers\User::class)->name('user');
+    Route::resource('/', \App\Http\Controllers\userController::class);
     Route::resource('users', \App\Http\Controllers\userController::class);
     Route::resource('gift', \App\Http\Controllers\giftController::class);
 
